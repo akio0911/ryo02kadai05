@@ -51,7 +51,7 @@ struct ContentView: View {
         
         guard let rightNumber = Double(displayrightNumber) else {
             showAlert = true
-            alertMessage = "割られる数を入力してください"
+            alertMessage = "割る数を入力してください"
             return
         }
         
