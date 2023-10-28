@@ -55,16 +55,9 @@ struct ContentView: View {
             return
         }
         
-        guard leftNumber != 0 else {
+        if rightNumber == 0 {
             showAlert = true
             alertMessage = "割る数には0を入力しないでください"
-            return
-        }
-        
-        guard rightNumber != 0 else {
-            showAlert = true
-            alertMessage = "割る数には0を入力しないでください"
-            return
         }
         
         resultNumber = leftNumber / rightNumber
@@ -78,6 +71,7 @@ struct TextFieldView: View {
         TextField("", text: $displayNumber)
             .keyboardType(.numberPad)
             .padding()
+            .border(.blue)
     }
 }
 
