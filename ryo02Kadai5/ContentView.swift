@@ -58,6 +58,7 @@ struct ContentView: View {
         if rightNumber == 0 {
             showAlert = true
             alertMessage = "割る数には0を入力しないでください"
+            return
         }
         
         resultNumber = leftNumber / rightNumber
